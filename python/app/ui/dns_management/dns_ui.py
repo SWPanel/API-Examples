@@ -239,7 +239,7 @@ class DNSUI:
             }
         }
 
-        print("\nRecreating DNS record...")
+        print("\nChanging TTL...")
 
         response = DNSService().post_change_ttl_dns_zone(service, dns_zone, body)
 
@@ -286,10 +286,6 @@ class DNSUI:
         if len(body) == 1:
             print("Nothing to update!")
             return
-
-
-        print(body)
-
 
         print("\nUpdating DNS record...")
 

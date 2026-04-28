@@ -6,12 +6,12 @@ class CronsManagementMenu:
         while True:
             print("\n=== Crons MANAGEMENT ===")
             print("1. Get crons")
-            print("2. Get cron users")
-            print("3. Create new cron")
-            print("4. Start cron")
-            print("5. Stop cron")
-            print("6. Modify cron")
-            print("7. Delete cron")
+            # print("2. Get cron users")
+            print("2. Create new cron")
+            print("3. Start cron")
+            print("4. Stop cron")
+            print("5. Modify cron")
+            print("6. Delete cron")
             print("0. Back")
 
             option = Input.get("\nOption: ")
@@ -19,22 +19,22 @@ class CronsManagementMenu:
             if option == "1":
                 CronUI().get_crons()
 
-            elif option == "2":
-                CronUI().get_cron_users()
+            # elif option == "2":
+            #     CronUI().get_cron_users()
 
-            elif option == "3":
+            elif option == "2":
                 CronUI().post_create_new_cron()
 
-            elif option == "4":
+            elif option == "3":
                 CronUI().post_start_cron()
 
-            elif option == "5":
+            elif option == "4":
                 CronUI().post_stop_cron()
 
-            elif option == "6":
+            elif option == "5":
                 CronUI().put_update_cron()
 
-            elif option == "7":
+            elif option == "6":
                 CronUI().delete_cron()
 
             elif option == "0":

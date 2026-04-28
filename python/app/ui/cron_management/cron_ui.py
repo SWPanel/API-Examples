@@ -55,35 +55,35 @@ class CronUI:
             "customize": {
                 "minutes": {
                     "every": {
-                        "number": minutes
+                        "number": str(minutes)
                     },
                     "odd": False,
                     "even": False
                 },
                 "hours": {
                     "every": {
-                        "number": hours
+                        "number": str(hours)
                     },
                     "odd": False,
                     "even": False
                 },
                 "days": {
                     "every": {
-                        "number": days
+                        "number": str(days)
                     },
                     "odd": False,
                     "even": False
                 },
                 "weekday": {
                     "every": {
-                        "number": week_day
+                        "number": str(week_day)
                     },
                     "odd": False,
                     "even": False
                 },
                 "months": {
                     "every": {
-                        "number": month
+                        "number": str(month)
                     },
                     "odd": False,
                     "even": False
@@ -145,7 +145,7 @@ class CronUI:
     def put_update_cron():
         service       = Input.required("\nService ID: ").upper()
         id_cron       = Input.required("Cron ID: ")
-        name          = Input.get("Cron name: ")
+        name          = Input.get("New cron name: ")
         user_execuion = Input.get("User ID execution: ")
         content       = Input.get("Content: ")
 
@@ -153,8 +153,8 @@ class CronUI:
         minutes  = Input.ask_int("\tMinutes (0...59): ")
         hours    = Input.ask_int("\tHour (0...23): ")
         days     = Input.ask_int("\tDays (1...31): ")
-        month    = Input.get("\tMonths (1...12, separated by a coma): ")
         week_day = Input.get("\tWeek day (1...7, separated by a coma): ")
+        month    = Input.get("\tMonths (1...12, separated by a coma): ")
         
         scheduler = {
             "customize": {
@@ -208,7 +208,7 @@ class CronUI:
             "scheduler": scheduler
         }
 
-        print("\nCreating new cron...")
+        print("\nUpdating cron information...")
 
         response = CronsService().put_update_cron(service, id_cron, body)
 

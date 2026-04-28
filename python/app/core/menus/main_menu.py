@@ -5,7 +5,7 @@ from app.core.menus.ftp.ftp_management_menu import FTPMenu
 from app.core.menus.database.database_management_menu import DatabaseManagementMenu
 from app.core.menus.dns.dns_management_menu import DNSManagementMenu
 from app.core.menus.dnssec.dnssec_managemenet import DNSSECManagementMenu
-from app.core.menus.crons.cron_management import CronsManagementMenu
+from app.core.menus.crons.cron_management_menu import CronsManagementMenu
 
 
 class MainMenu:
