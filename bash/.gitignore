@@ -1,0 +1,25 @@
+# Environment
+.env
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Bash history / swap
+*.swp
+*.swo
+
+# jq output / debug
+output.json
+response.json
