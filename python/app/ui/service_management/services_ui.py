@@ -76,6 +76,59 @@ class ServicesUI:
 
             else:
                 print("Option not valid")
+
+
+    # ====================
+    # DELETE
+    # ====================
+    @staticmethod
+    def delete_service():
+        service = Input.get("\nService ID: ").upper()
+
+        body = {
+            "additional": {},
+            "delete": {}
+        }
+
+        while True:
+
+            print("\nMode:")
+            print("\t1. Immediate")
+            print("\t2. Scheduled")
+            print("\t3. End of period")
+
+            option = Input.required("\nOption: ")
+
+            if option == "1":
+                body["delete"]["mode"] = "immediate"
+                
+                break
+
+            elif option == "2":
+                print()
+
+                body["delete"]["mode"] = "scheduled"
+                body["delete"]["date"] = Input.required("\tDate (YYYY-MM-DD): ")
+                body["delete"]["hour"] = Input.required("\tHour (HH:MM): ")
+
+                break
+
+            elif option == "3":
+                body["delete"]["mode"] = "end_of_period"
+
+                break
+            
+            else:
+                print("Option not valid")            
+
+
+        print("\nDeleting services...")
+
+        response = ServicesService().delete_service(service, body)
+
+        print("Done!\n")
+
+        Input.json_formatter(response)
     
 
 class NewServices:

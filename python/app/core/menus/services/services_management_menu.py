@@ -10,9 +10,10 @@ class ServicesMenu:
             print("1. List services")
             print("2. Check service status")
             print("3. Create new service")
-            print("4. Cloud Management")
-            print("5. Hosting Management")
-            print("6. Go back")
+            print("4. Delete service")
+            print("5. Cloud Management")
+            print("6. Hosting Management")
+            print("7. Go back")
 
             option = Input.get("\nOption: ")
 
@@ -26,9 +27,12 @@ class ServicesMenu:
                 ServicesUI.post_create_new_service()
 
             elif option == "4":
-                CloudMenu().run()
+                ServicesUI.delete_service()
 
             elif option == "5":
+                CloudMenu().run()
+
+            elif option == "6":
                 HostingMenu().run()
 
             elif option == "0":

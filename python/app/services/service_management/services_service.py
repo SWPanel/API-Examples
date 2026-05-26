@@ -52,3 +52,21 @@ class ServicesService:
             return data["Error message"]
         
         return data
+
+
+    # ====================
+    # DELETE
+    # ====================
+    def delete_service(self, service, body):
+        data = self.api.delete(
+            f"/services/{service}/delete/",
+            data=body
+        )
+
+        if not data:
+            return []
+        
+        if "Error message" in data:
+            return data["Error message"]
+        
+        return data
