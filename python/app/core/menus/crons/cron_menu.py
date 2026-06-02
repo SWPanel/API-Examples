@@ -1,7 +1,7 @@
 from app.helpers.input import Input
-from app.ui.cron_management.cron_ui import CronUI
+from app.ui.crons.cron_ui import CronUI
 
-class CronsManagementMenu:
+class CronsMenu:
     def run(self):
         while True:
             print("\n=== Crons MANAGEMENT ===")

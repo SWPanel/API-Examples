@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.database_management.database_service import DatabaseService
+from app.services.database.database_service import DatabaseService
 
 class DatabaseUI:
     # ====================

@@ -1,6 +1,6 @@
 import datetime
 from app.helpers.input import Input
-from app.services.crons_management.crons_service import CronsService
+from app.services.crons.crons_service import CronsService
 
 class CronUI:
     # ====================

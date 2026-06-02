@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.database_management.database_user_ui import DatabaseUserUI
+from app.ui.database.database_user_ui import DatabaseUserUI
 
 class DatabaseUserMenu:
     def run(self):

@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.service_management.hosting_service import HostingService
+from app.services.services.hosting_service import HostingService
 
 class HostingUI:
     # ====================

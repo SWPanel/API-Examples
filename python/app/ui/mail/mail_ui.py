@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.mail_management.mail_service import MailService
+from app.services.mail.mail_service import MailService
 
 class MailUI:
     # ====================

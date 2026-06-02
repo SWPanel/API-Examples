@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.mail_management.mailing_list_service import MailingListService
+from app.services.mail.mailing_list_service import MailingListService
 
 class MailingListUI:
     # ====================

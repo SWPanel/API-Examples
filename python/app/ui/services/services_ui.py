@@ -1,6 +1,5 @@
 from app.helpers.input import Input
-from app.helpers.main import Helpers
-from app.services.service_management.services_service import ServicesService
+from app.services.services.services_service import ServicesService
 from app.services.tools_service import ToolsService
 
 class ServicesUI:
@@ -214,14 +213,14 @@ class NewServices:
         print("\n--- Customize your Cloud ---")
 
         if id_service_type == "23-CL01":
-            vcores = Helpers.ask_int_with_step("vCores (1...24): ", 1, 24, 1)
-            ram    = Helpers.ask_int_with_step("RAM (2...64): ", 2, 64, 2)
-            hd     = Helpers.ask_int_with_step("GB Disk (20...2000): ", 20, 2000, 20)
+            vcores = Input.ask_int_with_step("vCores (1...24): ", 1, 24, 1)
+            ram    = Input.ask_int_with_step("RAM (2...64): ", 2, 64, 2)
+            hd     = Input.ask_int_with_step("GB Disk (20...2000): ", 20, 2000, 20)
 
         elif id_service_type == "25-CL01":
-            vcores = Helpers.ask_int_with_step("vCores (2...24): ", 2, 24, 2)
-            ram    = Helpers.ask_int_with_step("RAM (4...128): ", 4, 128, 4)
-            hd     = Helpers.ask_int_with_step("GB Disk (50...2000): ", 50, 2000, 50)
+            vcores = Input.ask_int_with_step("vCores (2...24): ", 2, 24, 2)
+            ram    = Input.ask_int_with_step("RAM (4...128): ", 4, 128, 4)
+            hd     = Input.ask_int_with_step("GB Disk (50...2000): ", 50, 2000, 50)
 
         cloud_server = {
             "id_service_type": id_service_type,
@@ -323,17 +322,17 @@ class NewServices:
             mail_min, mail_max, mail_step = plan["mail"]
             db_min, db_max, db_step       = plan["db"]
 
-            add_disc_space_total = Helpers.ask_int_with_step(
+            add_disc_space_total = Input.ask_int_with_step(
                 f"SSD Disk GB ({disk_min}...{disk_max}): ",
                 disk_min, disk_max, disk_step
             )
 
-            add_mailboxes_total = Helpers.ask_int_with_step(
+            add_mailboxes_total = Input.ask_int_with_step(
                 f"Email accounts ({mail_min}...{mail_max}): ",
                 mail_min, mail_max, mail_step
             )
 
-            add_databases_total = Helpers.ask_int_with_step(
+            add_databases_total = Input.ask_int_with_step(
                 f"Databases ({db_min}...{db_max}): ",
                 db_min, db_max, db_step
             )

@@ -1,7 +1,7 @@
 from app.helpers.input import Input
-from app.ui.dns_management.dns_ui import DNSUI
+from app.ui.dns.dns_ui import DNSUI
 
-class DNSManagementMenu:
+class DNSMenu:
     def run(self):
         while True:
             print("\n=== DNS MANAGEMENT ===")

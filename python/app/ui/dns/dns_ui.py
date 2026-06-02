@@ -1,6 +1,5 @@
 from app.helpers.input import Input
-from app.helpers.main import Helpers
-from app.services.dns_management.dns_service import DNSService
+from app.services.dns.dns_service import DNSService
 
 class DNSUI:
     DNS_TYPES = [
@@ -127,7 +126,7 @@ class DNSUI:
 
             elif choice == "6":
                 alias    = Input.required("Alias name: ")
-                priority = Helpers.ask_int_with_step("Priority (0...65535): ", 0, 65535, 1)
+                priority = Input.ask_int_with_step("Priority (0...65535): ", 0, 65535, 1)
                 exchange = Input.required("Mail server: ")
 
                 record = {
@@ -147,9 +146,9 @@ class DNSUI:
                 if not service_autodiscover.lower().endswith("_autodiscover"):
                     service_autodiscover += "_autodiscover"
    
-                priority = Helpers.ask_int_with_step("Priority (0...65535): ", 0, 65535, 1)
-                weight   = Helpers.ask_int_with_step("Weight (0...65535): ", 0, 65535, 1)
-                port     = Helpers.ask_int_with_step("Port (0...65535): ", 0, 65535, 1)
+                priority = Input.ask_int_with_step("Priority (0...65535): ", 0, 65535, 1)
+                weight   = Input.ask_int_with_step("Weight (0...65535): ", 0, 65535, 1)
+                port     = Input.ask_int_with_step("Port (0...65535): ", 0, 65535, 1)
                 target   = Input.required("Target: ")
 
                 record = {
@@ -168,9 +167,9 @@ class DNSUI:
             elif choice == "8":
                 alias         = Input.required("Alias: ")
                 certificate   = Input.required("TLSA hash: ")
-                usage         = Helpers.ask_int_with_step("Usage (0...255): ", 1, 255, 1)
-                selector      = Helpers.ask_int_with_step("Usage (0...255): ", 1, 255, 1)
-                matching_type = Helpers.ask_int_with_step("Usage (0...255): ", 1, 255, 1)
+                usage         = Input.ask_int_with_step("Usage (0...255): ", 1, 255, 1)
+                selector      = Input.ask_int_with_step("Usage (0...255): ", 1, 255, 1)
+                matching_type = Input.ask_int_with_step("Usage (0...255): ", 1, 255, 1)
 
                 record = {
                     "name": alias,

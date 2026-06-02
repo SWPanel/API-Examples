@@ -1,7 +1,7 @@
 from app.helpers.input import Input
-from app.ui.dnssec_management.dnssec_ui import DNSSECUI
+from app.ui.dnssec.dnssec_ui import DNSSECUI
 
-class DNSSECManagementMenu:
+class DNSSECMenu:
     def run(self):
         while True:
             print("\n=== DNSSEC MANAGEMENT ===")

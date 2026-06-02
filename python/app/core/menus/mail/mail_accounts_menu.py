@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.mail_management.mail_ui import MailUI
+from app.ui.mail.mail_ui import MailUI
 
 class MailAccountsMenu:
     def run(self):

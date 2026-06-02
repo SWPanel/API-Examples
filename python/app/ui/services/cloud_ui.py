@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.service_management.cloud_service import CloudService
+from app.services.services.cloud_service import CloudService
 
 class CloudUI:
     # ====================

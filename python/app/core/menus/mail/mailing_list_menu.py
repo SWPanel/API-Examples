@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.mail_management.mailing_list_ui import MailingListUI
+from app.ui.mail.mailing_list_ui import MailingListUI
 
 class MailingListMenu:
     def run(self):

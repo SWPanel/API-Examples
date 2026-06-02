@@ -1,12 +1,13 @@
 from app.helpers.input import Input
-from app.core.menus.services.services_management_menu import ServicesMenu
-from app.core.menus.mail.mail_management_menu import MailMenu
-from app.core.menus.ftp.ftp_management_menu import FTPMenu
-from app.core.menus.database.database_management_menu import DatabaseManagementMenu
-from app.core.menus.dns.dns_management_menu import DNSManagementMenu
-from app.core.menus.dnssec.dnssec_managemenet import DNSSECManagementMenu
-from app.core.menus.crons.cron_management_menu import CronsManagementMenu
-
+from app.core.menus.services.services_menu import ServicesMenu
+from app.core.menus.mail.mail_menu import MailMenu
+from app.core.menus.ftp.ftp_menu import FTPMenu
+from app.core.menus.database.database_menu import DatabaseMenu
+from app.core.menus.dns.dns_menu import DNSMenu
+from app.core.menus.dnssec.dnssec_menu import DNSSECMenu
+from app.core.menus.crons.cron_menu import CronsMenu
+from python.app.core.menus.domains.domains_menu import DomainsMenu
+from python.app.core.menus.ssl.ssl_menu import SSLMenu
 
 class MainMenu:
     def run(self):
@@ -19,6 +20,8 @@ class MainMenu:
             print("5. DNS Management")
             print("6. DNSSec Management")
             print("7. Cron Management")
+            print("8. Domain Management")
+            print("9. SSL Management")
             print("0. Exit")
 
             option = Input.get("\nOption: ")
@@ -33,16 +36,22 @@ class MainMenu:
                 FTPMenu().run()
 
             elif option == "4":
-                DatabaseManagementMenu().run()
+                DatabaseMenu().run()
 
             elif option == "5":
-                DNSManagementMenu().run()
+                DNSMenu().run()
 
             elif option == "6":
-                DNSSECManagementMenu().run()
+                DNSSECMenu().run()
 
             elif option == "7":
-                CronsManagementMenu().run()
+                CronsMenu().run()
+
+            elif option == "8":
+                DomainsMenu().run()
+
+            elif option == "9":
+                SSLMenu().run()
 
             elif option == "0":
                 print("\nBye!")

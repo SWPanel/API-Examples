@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.service_management.hosting_ui import HostingUI
+from app.ui.services.hosting_ui import HostingUI
 
 class HostingMenu:
     def run(self):

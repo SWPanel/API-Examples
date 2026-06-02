@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.dnssec_management.dnssec_service import DNSSECService
+from app.services.dnssec.dnssec_service import DNSSECService
 
 class DNSSECUI:
     # ====================

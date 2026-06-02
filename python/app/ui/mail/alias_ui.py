@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.mail_management.alias_service import AliasService
+from app.services.mail.alias_service import AliasService
 
 class AliasUI:
     # ====================

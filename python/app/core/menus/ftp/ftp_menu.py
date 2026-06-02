@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.ftp_management.ftp_ui import FTPUI
+from app.ui.ftp.ftp_ui import FTPUI
 
 class FTPMenu:
     def run(self):

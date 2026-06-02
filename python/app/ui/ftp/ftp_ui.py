@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.services.ftp_management.ftp_service import FTPService
+from app.services.ftp.ftp_service import FTPService
 
 class FTPUI:
     # ====================

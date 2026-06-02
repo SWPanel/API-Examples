@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.mail_management.alias_ui import AliasUI
+from app.ui.mail.alias_ui import AliasUI
 
 class AliasAccountsMenu:
     def run(self):

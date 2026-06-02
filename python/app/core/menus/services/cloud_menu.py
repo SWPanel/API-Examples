@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.service_management.cloud_ui import CloudUI
+from app.ui.services.cloud_ui import CloudUI
 
 class CloudMenu:
     def run(self):

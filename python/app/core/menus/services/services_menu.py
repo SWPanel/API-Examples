@@ -1,5 +1,5 @@
 from app.helpers.input import Input
-from app.ui.service_management.services_ui import ServicesUI
+from app.ui.services.services_ui import ServicesUI
 from app.core.menus.services.cloud_menu import CloudMenu
 from app.core.menus.services.hosting_menu import HostingMenu
 
